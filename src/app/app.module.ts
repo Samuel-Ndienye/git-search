@@ -1,37 +1,38 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+import { RepositoryComponent } from './repository/repository.component';
+import { SearchComponent } from './search/search.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { NotfoundComponent } from './notfound/notfound.component';
-import { UserserviceService } from './userservice.service';
-import { SearchFormComponent } from './search-form/search-form.component';
-import { UsersComponent } from './users/users.component';
-import { ReopsitoriesComponent } from './reopsitories/reopsitories.component';
-import { DatePipePipe } from './date-pipe.pipe';
-import { HighlightDirective } from './highlight.directive';
+import { DatecountPipe } from './datecount.pipe';
+import { ColorDirective } from './color.directive';
+import { NotFoundComponent } from './not-found/not-found.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    UserComponent,
+    RepositoryComponent,
+    SearchComponent,
     NavbarComponent,
-    NotfoundComponent,
-    SearchFormComponent,
-    UsersComponent,
-    ReopsitoriesComponent,
-    DatePipePipe,
-    HighlightDirective
+    DatecountPipe,
+    ColorDirective,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [UserserviceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,38 @@
+<div class="">
+  <div class="col-md-12">
+      <app-search (getName)='findUser($event)'></app-search>
+  </div>
+</div>
+
+<div  class="row container m-3">
+  <div class="col-md-6">
+      <img src="{{users.avatar_url}}" alt="Searching..">
+      <p>
+          <a href="{{users.html_url}}" target="blank" class="btn btn-success btn-sm">View profile on Github</a>
+      </p>
+  </div>
+
+  <div  class="col-md-6">
+      <h3>NAME: {{users.name}}</h3>
+
+      <table class="table  ">
+          <tbody>
+              <tr>
+                  <th scope="row">Github Username: </th>
+                  <td> <a href="{{users.html_url}}" target="_blank">{{users.login}}</a></td>
+
+              </tr>
+              <tr>
+                  <th scope="row">Created On:</th>
+                  <td>{{users.created_at | date:"short"}}</td>
+              </tr>
+
+              <tr>
+                  <th scope="row">Account-Creation:</th>
+                  <td>{{users.created_at | datecount}}</td>
+              </tr>
+          </tbody>
+      </table>
+      
+  </div>
+</div>

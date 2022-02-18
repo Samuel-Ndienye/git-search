@@ -1,0 +1,20 @@
+.row{
+  background-color: black;
+  width: 80%;
+  align-items: center;
+  margin-left: 120px;
+  border-radius: 30px;
+  color: white;
+
+}
+.section{
+text-align: center;
+color: black;
+font-size: 33px;  
+}
+a{
+  color: pink;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}

@@ -1,0 +1,17 @@
+img{
+  height: 50%;
+}
+h3 {
+  color: mediumturquoise;
+  font-weight: bold;
+  font-size: 32px;
+}
+li a{
+  text-decoration: none;
+  color: mediumturquoise;
+}
+.btn{
+  background-color: mediumturquoise;
+  font-weight: bold;
+  border: none;
+}
