@@ -2,7 +2,6 @@ import { SearchRequestService } from '../search-request.service';
 import { Component, OnInit } from '@angular/core';
 import {Repository} from '../repository'
 import {User} from 'src/app/user'
-// import {SearchRequestService} from '../services/search_request'
 
 @Component({
   selector: 'app-user',
