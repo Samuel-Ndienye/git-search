@@ -38,7 +38,7 @@ export class SearchRequestService {
     
     const promise = new Promise<void>((resolve) => {
       this.http.get<ApiResponse>('https://api.github.com/users/' + searchName + '?accessToken=' + 
-      environment.apiUrl).toPromise().then(response=> {
+      environment.apiKey).toPromise().then(response=> {
         this.users.name = response!.name;
         this.users.html_url = response!.html_url;
         this.users.login = response!.login;
@@ -65,7 +65,7 @@ export class SearchRequestService {
         }
 
         const myPromise = new Promise((resolve, reject) => {
-            this.http.get<ApiResponse>('https://api.github.com/users/' + searchMe + '/repos?order=created&sort=asc?access_token=' + environment.apiUrl).toPromise().then(getRepoResponse => {
+            this.http.get<ApiResponse>('https://api.github.com/users/' + searchMe + '/repos?order=created&sort=asc?access_token=' + environment.apiKey).toPromise().then(getRepoResponse => {
                 this.newRepository = getRepoResponse;
                 resolve(myPromise);
             }, error => {
@@ -82,7 +82,7 @@ export class SearchRequestService {
         }
 
         const promise = new Promise((resolve, reject) => {
-            this.http.get<ApiResponse>('https://api.github.com/search/repositories?q=' + searchName + ' &per_page=10 ' + environment.apiUrl).toPromise().then(getRepoResponse => {
+            this.http.get<ApiResponse>('https://api.github.com/search/repositories?q=' + searchName + ' &per_page=10 ' + environment.apiKey).toPromise().then(getRepoResponse => {
                 this.searchRepo = getRepoResponse!.items;
 
                 resolve(promise);
