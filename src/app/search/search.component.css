@@ -1,17 +1,17 @@
 .search_input{
-   color: orangered;
+   color: mediumturquoise;
    border-top-left-radius: 19px; 
    border-bottom-left-radius: 13px;   
 }
 input[type="submit"]{
-   background-color:orangered;
+   background-color:mediumturqise;
    border-top-right-radius: 13px; 
    border-bottom-right-radius: 13px;
    
 }
 input{
    height:40px;
-   border:3px solid orangered;
+   border:3px solid mediumturquoise;
    margin-top: 10px;
    margin-bottom: 10px;
    
